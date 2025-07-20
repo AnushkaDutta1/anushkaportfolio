@@ -1,6 +1,6 @@
 import { ArrowRight, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-// Profile image placeholder - user will upload their own image later
+import profilePicture from '@/assets/profile-picture.jpg';
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -76,8 +76,12 @@ const Hero = () => {
             <div className="relative">
               {/* Main Profile Container */}
               <div className="relative w-80 h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex items-end justify-center p-8">
-                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-4xl font-bold gradient-text">AD</div>
+                <div className="w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
+                  <img 
+                    src={profilePicture} 
+                    alt="Anushka Dutta" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
