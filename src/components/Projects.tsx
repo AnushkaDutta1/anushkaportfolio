@@ -139,22 +139,50 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3 mt-6 pt-4 border-t border-border">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    View Code
-                  </Button>
+                  {(project.title === "Retail Sales Data Analysis & Visualization") ? (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      asChild
+                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    >
+                      <a href="https://public.tableau.com/app/profile/anushka.dutta6679/viz/AnushkaDutta_SalesDataAnalysis/Story?publish=yes" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </Button>
+                  )}
+                  {(project.title === "Excel Analytical Platform") ? (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      asChild
+                      className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                    >
+                      <a href="https://github.com/Anushkadutta5493/Excel-Analytics-Platform" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        View Code
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View Code
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

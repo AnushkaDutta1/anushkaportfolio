@@ -146,17 +146,20 @@ const Hero = () => {
             asChild
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Anushkadutta5493" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
             </a>
           </Button>
           <Button
             variant="ghost"
             size="sm"
+            asChild
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            <Download className="h-5 w-5" />
-            <span className="ml-2 text-sm">Resume</span>
+            <a href="https://drive.google.com/file/d/1s3wOqer7QgVDPjEoEiW76wXTFipGWwZj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Download className="h-5 w-5" />
+              <span className="ml-2 text-sm">Resume</span>
+            </a>
           </Button>
         </div>
       </div>
